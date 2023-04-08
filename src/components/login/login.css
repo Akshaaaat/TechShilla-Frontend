@@ -1,0 +1,129 @@
+body{
+    background: #080710;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.flip-container{
+   padding: 3px;
+}   
+.flipper {
+    padding: 30px;
+    width: 300px;
+    height:370px;
+    margin: auto;
+    background-color: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.1);
+    color: #FFF;
+    border-radius: 3%;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+	
+	transition: 0.7s cubic-bezier(0.63, 0.9, 0.68, 1.29);
+	transform-style: preserve-3d;
+}
+
+.loginBox, .signUpBox {
+    position: absolute;
+    padding: 10px 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+	backface-visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    
+}
+
+.loginBox{
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+.signUpBox{
+    transform: rotateY(180deg);
+}
+.flip{
+	transform: rotateY(180deg);
+}
+
+.flipbutton{
+    color:#4096ee;
+    text-decoration:none;
+    text-align:left;
+}
+
+/****
+    Login and SignUp Forms
+****/
+
+.title{
+    text-align: center;
+    margin: 15px;
+}
+.inputDiv{
+    margin: 2px 5px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+h5{
+    font-weight: 100;
+    margin: 4px 3px;
+}
+
+.inputDiv input{
+    background: black;
+    color: #FFF;
+    border-radius: 4px;
+    height: 37px;
+    box-sizing: border-box;
+    padding: 7px 9px;
+
+}
+
+.loginButton{
+    margin: 12px;
+    padding: 5px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.btns{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.loginBox .btns{
+    margin-top: 100px;
+}
+
+
+
+/*******
+    The weird shapes
+*******/
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
